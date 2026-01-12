@@ -1,4 +1,8 @@
 <?php
+// Suppress deprecation notices so users just see the redirect
+error_reporting(E_ALL & ~E_DEPRECATED);
+ini_set('display_errors', '0');
+
 include 'config/config.php';
 
 if ($_SERVER["REQUEST_METHOD"] !== "GET" || !isset($_GET['id'])) {
